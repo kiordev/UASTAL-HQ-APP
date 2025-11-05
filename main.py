@@ -1,12 +1,12 @@
 import flet as ft
 from ASSETS import design as ds
-from UI import vat
+from UI import vat, address
 
 
 def main(page: ft.Page):
 
     # PAGE SETTINGS - title
-    page.title = "UASTAL HQ"
+    page.title = "UASTAL HQ build 0.3"
 
     # PAGE SETTINGS - background color
     page.bgcolor = "#090040"
@@ -20,17 +20,20 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
+    # MAIN UI
+    body = ft.Container()
+
     # NAVIGATION FUNTION
     def on_nav_change(e):
         selected = e.control.selected_index
         if selected == 0:
-            content.content = vat.view()
+            body.content = vat.view()
         elif selected == 1:
-            content.content = ft.Text("Адреси (в разработке)", color=ds.accent)
+            body.content = address.view()
         elif selected == 2:
-            content.content = ft.Text("Документи (в разработке)", color=ds.accent)
+            body.content = ft.Text("Документи (в разработке)", color=ds.accent)
         elif selected == 3:
-            content.content = ft.Text("Скрипти (в разработке)", color=ds.accent)
+            body.content = ft.Text("Скрипти (в разработке)", color=ds.accent)
         page.update()
 
     # PAGE NAVIGATION
@@ -72,10 +75,10 @@ def main(page: ft.Page):
     )
 
     # По умолчанию — вкладка VAT
-    content = ft.Container()
-    content.content = vat.view()
+    
+    body.content = vat.view()
 
     
-    page.add(content)
+    page.add(body)
 
 ft.app(target=main)
