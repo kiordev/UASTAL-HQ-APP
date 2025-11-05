@@ -28,7 +28,7 @@ def view():
             result = value / 1.2
             output.value = f"{result:.2f}"
         except Exception:
-            output.value = "Ошибка!"
+            output.value = "Помилка!"
         spin_logo_minus()
         output.update()
 
@@ -38,7 +38,7 @@ def view():
             result = value * 1.2
             output.value = f"{result:.2f}"
         except Exception:
-            output.value = "Ошибка!"
+            output.value = "Помилка!"
         spin_logo_plus()
         output.update()
 

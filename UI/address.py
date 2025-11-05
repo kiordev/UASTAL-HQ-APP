@@ -5,6 +5,23 @@ from ASSETS import design as ds
 
 def view():
 
+    # ADRESS TEXTFIELDS - office NP
+    office_NP_Text = ft.Text(
+        value="Адреса Нової Пошти:",
+        width=200,
+        color=ds.white,
+        size=15,
+        weight=ft.FontWeight.BOLD,
+        text_align=ft.TextAlign.CENTER,
+    )
+    office_NP_Address = ft.TextField(
+        width=290, 
+        bgcolor=ds.white,
+        read_only=True,
+        value="ТОВ СТОРОЖУК, 32849298, Київ, НП 193",
+        text_size=14
+    )
+
     # ADRESS TEXTFIELDS - office
     office_Text = ft.Text(
         value="Адреса офісу:",
@@ -61,6 +78,8 @@ def view():
     return ft.Container(
         content=ft.Column(
             [
+                office_NP_Text,
+                office_NP_Address,
                 office_Text,
                 office_Address,
                 repair_Text,

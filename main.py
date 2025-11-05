@@ -1,12 +1,12 @@
 import flet as ft
 from ASSETS import design as ds
-from UI import vat, address
+from UI import vat, address, docs
 
 
 def main(page: ft.Page):
 
     # PAGE SETTINGS - title
-    page.title = "UASTAL HQ build 0.3"
+    page.title = "UASTAL HQ build 0.5"
 
     # PAGE SETTINGS - background color
     page.bgcolor = "#090040"
@@ -31,7 +31,7 @@ def main(page: ft.Page):
         elif selected == 1:
             body.content = address.view()
         elif selected == 2:
-            body.content = ft.Text("Документи (в разработке)", color=ds.accent)
+            body.content = docs.view()
         elif selected == 3:
             body.content = ft.Text("Скрипти (в разработке)", color=ds.accent)
         page.update()
