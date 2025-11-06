@@ -1,29 +1,31 @@
-# 🧭 UASTAL HQ — Internal Control Panel  
-**Version 0.3**
+# UASTAL HQ Desktop App
 
-UASTAL HQ — это внутренняя десктопная панель управления, созданная для упрощения повседневных операций компании **STOROZHUK LLC / UASTAL**.  
-Приложение построено на **Python + Flet**, имеет модульную структуру, современный интерфейс и ориентировано на использование внутри офиса.
+A modern **Python/Flet-powered** desktop application for technical professionals, engineers, and industrial managers working with laser cutting, procurement, and repair services.
 
 ---
 
-## ⚙️ Основные функции
+## 🚀 Features
 
-### 📄 Навигация  
-Интерфейс разделён на вкладки:
-- **VAT** — отображение и обработка данных по ПДВ (звуковое сопровождение действий, клики и переходы);  
-- **Адреси** — справочная информация и рабочие адреса (в разработке);  
-- **Документи** — быстрый доступ к шаблонам и формам компании (в разработке);  
-- **Скрипти** — служебные утилиты и автоматизации (в разработке).
+- **Intuitive Navigation:** Instantly switch between VAT calculator, official documents, company addresses, and service scripts.  
+- **VAT Calculator:** Add or remove Ukrainian VAT (20%) for quick commercial calculations.  
+- **Instant Document Access:** Download key official documents (requisites, statements, extracts) directly to your desktop with one click.  
+- **Company Addresses:** Quick reference for all legal, warehouse, repair, and delivery locations.  
+- **Handy Scripts:** One-touch copy-to-clipboard for technical support and repair requests.  
+- **Polished UX:** Includes click sound feedback and a custom app icon for a professional experience.
 
-### 🔊 Аудио-обратная связь  
-При нажатии на элементы интерфейса проигрывается короткий **click sound**, что создаёт ощущение отзывчивости и живости приложения.
+---
 
-### 📑 Работа с файлами  
-Документы формата **.docx** и **.pdf** можно загрузить **внутрь программы**, чтобы:
-- хранить их локально вместе с приложением;
-- предоставлять пользователю возможность **скачать** нужный документ (например, “Витяг”) в любое место — например, на рабочий стол.
+## 🛠️ Technologies
 
-### 📋 Копирование в буфер обмена  
-Любой текст можно мгновенно скопировать нажатием кнопки:
-```python
-page.set_clipboard("Текст для копирования")
+- **Python 3.10+**
+- [Flet](https://flet.dev/)
+- **PyInstaller** (for packaging into an executable)
+
+---
+
+## 💾 Installation
+
+```bash
+git clone https://github.com/your-username/uastal-hq.git
+cd uastal-hq
+pip install -r requirements.txt
