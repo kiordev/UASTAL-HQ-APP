@@ -10,27 +10,87 @@ def view():
         "Беремо випромінювач в ремонт після вашої письмової згоди на проведення ремонтних робіт.\n\n"
         "Вартості вказані нижче:"
     )
+    optical_text = (
+        "Також хотіли б вас попередити:\n\n"
+        "Наша компанія не здійснює обмін або повернення комплектуючих, які мають оптичні елементи.\n\n"
+        "До цього відносяться: фокусні та коліматорні лінзи, дзеркала, захисне скло, захисні конектори.\n\n"
+        "Тому просимо вас дуже уважно перевірити габаритні параметри, фокусну відстань, розраховану потужність відповідних комплектуючих\n\n"
+        "Ми турбуємось про безпеку ваших коштів!\n\n"
+    )
+    consumables_text = (
+        "Вітаю! \n\n"
+        "Для виставлення рахунку будь ласка надішліть:\n\n"
+        " - Назву компанії\n\n"
+        " - Код ЄДРПОУ\n\n"
+        " - Потрібні вам позиції та кількість\n\n"
+        " - Адресу відправки нової пошти\n\n"
+        " - Замовлення буде надіслано одразу після підтвердження оплати від бухгалтерії"
+    )
     def copy_emitter(e):
         e.page.set_clipboard(emitter_text)
         e.page.update()
-    scriptsText = ft.Text(
-        value="КОПІЮВАТИ СКРИПТ:",
+    
+    def copy_optical(e):
+        e.page.set_clipboard(optical_text)
+        e.page.update()
+
+    def copy_consumables(e):
+        e.page.set_clipboard(consumables_text)
+        e.page.update()
+
+    RepairscriptsText = ft.Text(
+        value="СКРИПТИ РЕМОНТУ:",
         width=200,
-        color=ds.white,
+        color=ds.accent,
         size=15,
         weight=ft.FontWeight.BOLD,
         text_align=ft.TextAlign.CENTER,
     )
+
     emitterButton = ft.ElevatedButton(
-        "ВИПРОМІНЮВАЧ",
+        "ВИПРОМІНЮВАЧІВ",
         width=230,
         height=30,
         on_click=copy_emitter,
+        bgcolor=ds.light,
+        color=ds.white,
     )
+
+    ConsumablesscriptsText = ft.Text(
+        value="ПРОДАЖ РОЗХІДНИКІВ:",
+        width=200,
+        color=ds.accent,
+        size=15,
+        weight=ft.FontWeight.BOLD,
+        text_align=ft.TextAlign.CENTER,
+    )
+
+    opticButton = ft.ElevatedButton(
+        "ПОПЕРЕДЖЕННЯ ПРО ОПТИКУ",
+        width=230,
+        height=30,
+        on_click=copy_optical,
+        bgcolor=ds.light,
+        color=ds.white,
+    )
+
+    clientDataButton = ft.ElevatedButton(
+        "НАДІШЛІТЬ РЕКВІЗИТИ",
+        width=230,
+        height=30,
+        on_click=copy_consumables,
+        bgcolor=ds.light,
+        color=ds.white,
+    )
+
     return ft.Column(
         [
-            scriptsText,
+            RepairscriptsText,
             emitterButton,
+            ConsumablesscriptsText,
+            clientDataButton,
+            opticButton,
+            
         ],
         alignment=ft.MainAxisAlignment.CENTER,
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,

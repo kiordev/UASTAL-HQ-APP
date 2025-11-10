@@ -40,7 +40,7 @@ def view():
     docsText = ft.Text(
         value="ДОКУМЕНТИ:",
         width=200,
-        color=ds.white,
+        color=ds.accent,
         size=15,
         weight=ft.FontWeight.BOLD,
         text_align=ft.TextAlign.CENTER,
@@ -50,18 +50,24 @@ def view():
         width=230,
         height=30,
         on_click=save_file("Реквизиты.docx"),
+        bgcolor=ds.light,
+        color=ds.white,
     )
     vypButton = ft.ElevatedButton(
         "ЗАВАНТАЖИТИ ВИПИСКУ",
         width=230,
         height=30,
         on_click=save_file("Выписка.pdf"),
+        bgcolor=ds.light,
+        color=ds.white,
     )
     vytButton = ft.ElevatedButton(
         "ЗАВАНТАЖИТИ ВИТЯГ",
         width=230,
         height=30,
         on_click=save_file("Вытяг.pdf"),
+        bgcolor=ds.light,
+        color=ds.white,
     )
     return ft.Column(
         [docsText, reqButton, vypButton, vytButton],

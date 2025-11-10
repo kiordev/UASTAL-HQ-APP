@@ -71,13 +71,13 @@ def view():
     output = ft.Text(
         value="",
         width=200,
-        color=ds.white,
+        color=ds.accent,
         size=22,
         weight=ft.FontWeight.BOLD,
         text_align=ft.TextAlign.CENTER,
     )
     logo = ft.Image(
-        src=resource_path("ASSETS/icon.png"),
+        src=resource_path("ASSETS/vatPopuga.png"),
         width=80,
         height=80,
         fit=ft.ImageFit.CONTAIN,
@@ -112,6 +112,5 @@ def view():
         ),
         padding=20,
         bgcolor=ds.dark,
-        shadow=ft.BoxShadow(blur_radius=15, color=ft.colors.BLACK26, spread_radius=1),
         alignment=ft.alignment.center,
     )
