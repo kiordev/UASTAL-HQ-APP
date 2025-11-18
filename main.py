@@ -1,4 +1,4 @@
-#Команда для билда pyinstaller main.py --windowed --add-data "ASSETS;ASSETS" --add-data "docs;docs" --icon ASSETS/icon.png
+#Команда для билда: pyinstaller main.py --windowed --add-data "ASSETS;ASSETS" --add-data "docs;docs" --icon ASSETS/icon.png
 import sys, os
 import flet as ft
 from ASSETS import design as ds
@@ -12,7 +12,7 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 def main(page: ft.Page):
-    page.title = "UASTAL TECH HQ BUILD 1.3.5"
+    page.title = "UASTAL TECH HQ BUILD 1.3.8"
     page.window.resizable = False
     page.bgcolor = ds.dark
     page.window.width = 430

@@ -59,6 +59,8 @@ def view():
     def save_np(e):
         data["office_np"] = office_NP_Address.value
         save_data(data)
+        office_NP_EditButton.icon_color = ds.navigationbar
+        office_NP_EditButton.update()
 
     office_NP_EditButton = ft.IconButton(
         icon=ft.Icons.EDIT,
@@ -88,6 +90,8 @@ def view():
     def save_office(e):
         data["office"] = office_Address.value
         save_data(data)
+        office_EditButton.icon_color = ds.navigationbar
+        office_EditButton.update()
 
     office_EditButton = ft.IconButton(
         icon=ft.Icons.EDIT,
@@ -117,6 +121,9 @@ def view():
     def save_repair(e):
         data["repair"] = repair_Address.value
         save_data(data)
+        repair_EditButton.icon_color = ds.navigationbar
+        repair_EditButton.update()
+        
     repair_EditButton = ft.IconButton(
         icon=ft.Icons.EDIT,
         icon_color=ds.accent,
@@ -145,6 +152,9 @@ def view():
     def save_sand(e):
         data["sand"] = sand_Address.value
         save_data(data)
+        sand_EditButton.icon_color = ds.navigationbar
+        sand_EditButton.update()
+
     sand_EditButton = ft.IconButton(
         icon=ft.Icons.EDIT,
         icon_color=ds.accent,

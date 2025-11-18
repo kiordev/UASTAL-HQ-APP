@@ -26,6 +26,11 @@ def view():
         " - Адресу відправки нової пошти\n\n"
         " - Замовлення буде надіслано одразу після підтвердження оплати від бухгалтерії"
     )
+    promua_text = (
+        "Вітаю отримали ваше замовлення на PROM UA! \n\n"
+        "Нажаль післяплата або розрахунок на карту тимчасово недоступний\n\n"
+        "Можу запропонувати оплатити по IBAN, оплата за ним приходить швидше\n\n"
+    )
     def copy_emitter(e):
         e.page.set_clipboard(emitter_text)
         e.page.update()
@@ -36,6 +41,10 @@ def view():
 
     def copy_consumables(e):
         e.page.set_clipboard(consumables_text)
+        e.page.update()
+    
+    def copy_promua(e):
+        e.page.set_clipboard(promua_text)
         e.page.update()
 
     RepairscriptsText = ft.Text(
@@ -83,6 +92,24 @@ def view():
         color=ds.white,
     )
 
+    promUaText = ft.Text(
+        value="PROM.UA: ",
+        width=200,
+        color=ds.accent,
+        size=15,
+        weight=ft.FontWeight.BOLD,
+        text_align=ft.TextAlign.CENTER,
+    )
+
+    clientPromUaButton = ft.ElevatedButton(
+        "СКРИПТ PROM.UA",
+        width=230,
+        height=30,
+        on_click=copy_promua,
+        bgcolor=ds.light,
+        color=ds.white,
+    )
+
     return ft.Column(
         [
             RepairscriptsText,
@@ -90,7 +117,8 @@ def view():
             ConsumablesscriptsText,
             clientDataButton,
             opticButton,
-            
+            promUaText,
+            clientPromUaButton
         ],
         alignment=ft.MainAxisAlignment.CENTER,
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,

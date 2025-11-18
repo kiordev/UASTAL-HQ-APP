@@ -55,6 +55,7 @@ def view():
         width=250,
         bgcolor=ds.white,
         text_style=ft.TextStyle(color=ft.colors.BLACK87),
+        on_submit=calculate_without_vat
     )
     calc_button_no_vat = ft.ElevatedButton(
         text="ВИДАЛИТИ ПДВ",
