@@ -1,31 +1,34 @@
-# UASTAL HQ Desktop App
+# UASTAL HQ — Flet Desktop App
 
-A modern **Python/Flet-powered** desktop application for technical professionals, engineers, and industrial managers working with laser cutting, procurement, and repair services.
-
----
-
-## 🚀 Features
-
-- **Intuitive Navigation:** Instantly switch between VAT calculator, official documents, company addresses, and service scripts.  
-- **VAT Calculator:** Add or remove Ukrainian VAT (20%) for quick commercial calculations.  
-- **Instant Document Access:** Download key official documents (requisites, statements, extracts) directly to your desktop with one click.  
-- **Company Addresses:** Quick reference for all legal, warehouse, repair, and delivery locations.  
-- **Handy Scripts:** One-touch copy-to-clipboard for technical support and repair requests.  
-- **Polished UX:** Includes click sound feedback and a custom app icon for a professional experience.
+Багатофункціональний desktop-додаток для керування адресами, документами та параметрами підприємства. Реалізовано на **Python + Flet**, підтримує користувацькі теми, звуки, роботу з JSON-даними та авто-перезапуск для застосування налаштувань.
 
 ---
 
-## 🛠️ Technologies
+## Можливості
 
-- **Python 3.10+**
-- [Flet](https://flet.dev/)
-- **PyInstaller** (for packaging into an executable)
+- **Навігація** між ключовими розділами (ПДВ, Адреси, Документи, Скрипти, Налаштування)
+- **Редаговані адреси** зі збереженням даних у JSON
+- **Імпорт документів** для перегляду/збереження
+- **Звукові ефекти**
+- **Гнучка система тем** з авто-перезапуском застосунку
+- **Збірка через PyInstaller** у .exe, підтримка ресурсів (ASSETS, docs)
 
 ---
 
-## 💾 Installation
+## Система тем
 
-```bash
-git clone https://github.com/your-username/uastal-hq.git
-cd uastal-hq
-pip install -r requirements.txt
+У застосунку реалізовано автоматичне підвантаження тем — кожен елемент інтерфейсу відповідно забарвлюється у кольори вибраної теми.  
+Змінити тему можна через меню налаштувань із подальшим перезапуском застосунку.
+
+---
+
+## Робота з даними
+
+- Усі значення адрес зберігаються в окремому JSON-файлі, завантажуються під час запуску та змінюються натисканням кнопки **Edit**.
+- Документи з папки **docs** можна завантажити на робочий стіл або переглянути.
+
+---
+
+## Ліцензія
+
+MIT / GPL — на ваш вибір.
