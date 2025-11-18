@@ -56,6 +56,15 @@ THEME_MAP = {
         "white": "#FFFFFF",
         "navigationbar" : "#FF9900",
     },
+    "Adeptus Astartes Ultramarine": {
+        "dark": "#2953C7",
+        "semi": "#0F1D46",
+        "light": "#FCC54E",
+        "accent": "#FFFFFF",
+        "accent_light": "#6B0000",
+        "white": "#FFFFFF",
+        "navigationbar" : "#FFFFFF",
+    },
 }
 
 SETTINGS_FILE = "theme.txt"
